@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<head>
+    <title>Lab 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+        <h1 id="heading1">Diana Zhu -  INST 377 Lab 4</h1>
+
+    <br>
+
+    <!---Alert Me-->
+    <div class = "left">
+        <form name="alertForm" onsubmit="return formAlert()">
+            <label for="name">Name: </label>
+            <input type="text" id="name" required>
+            <input type="submit" value = "Alert Me!">
+        </form>
+    </div>
+
+    <!--Color Change-->
+    <div class = "right">
+        <button onclick="changeColor()"> Change Color </button>    
+    </div>
+
+    <!--Form Validation-->
+    <div class = "left" >
+        <form name="validationForm" onsubmit="return formValidation()">
+            <label for="textVal">Text Validation: </label>
+            <input type="text" id="textVal" required>
+            <input type="submit" value="Validate Text">
+        </form>
+    </div>
+    
+    <!--Add Text-->
+    <div class = "right">
+        <button onclick="addText()"> Add Text </button> 
+    </div>
+
+    <!--Javascript-->
+    <script>
+        function formAlert(){
+            alert("Hello " + document.getElementById("name").value + "!")
+        }
+        function formValidation(){
+            const validationRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+/;
+
+            if (validationRegex.test(document.getElementById("textVal").value)) {
+                alert('The text has special characters!')
+
+                return false;
+            }
+        }
+        var backgroundColors = ['#d9d4e7','#fffffe']
+        function changeColor() {
+            bg_color = backgroundColors.shift();
+            backgroundColors.push(bg_color); 
+            document.body.style.backgroundColor=bg_color;
+        }
+        function addText(){
+            let heading = document.getElementById("heading1");
+            heading.textContent += " - Add Text";
+            
+        }
+    </script>
+
+</body>
+
+</html>
