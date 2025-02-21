@@ -1,0 +1,38 @@
+body {
+    background-color: #fffffe;
+    font-family: bodyFont;
+}
+
+div{
+    width: 40%;
+    background-color: #fec7d7;
+    color:#0e172c;
+    border: 3px solid #0e172c;
+    margin: 30px;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.left {
+    float: left;
+    
+}
+.right {
+    float: left;
+}
+
+@font-face {
+    font-family: bodyFont;
+    src: url(Proxima\ Nova\ Font.otf);
+}
+
+  
+
+h1{
+    text-align: center;
+    color: #0e172c;
+}
+h3{
+    text-align: center;
+}
